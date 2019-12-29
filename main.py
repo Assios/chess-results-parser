@@ -21,6 +21,6 @@ try:
 		rows.append([rank, row["FED"], row["Unnamed: 3"], row["Name"], row[7]])
 
 	with open("round_%s.md" % ROUND_NUMBER, "w") as f:
-		f.write(tabulate(rows, headers=["Ranking","FED", "Title", "Name", "Points"]))
+		f.write(tabulate(rows, headers=["Ranking","FED", "Title", "Name", "Points"], tablefmt="github"))
 except:
 	print("Round %s not available" % ROUND_NUMBER)
