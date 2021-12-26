@@ -4,11 +4,12 @@ from tabulate import tabulate
 import requests
 import json
 
-# BLitz: http://chess-results.com/tnr499129.aspx?lan=1&zeilen=99999&art=4&flag=30&prt=4
 
-# Rapid: http://chess-results.com/tnr499127.aspx?lan=1&zeilen=99999&art=4&flag=30&prt=4
+# Rapid: https://chess-results.com/tnr600852.aspx?lan=1&art=1&rd=3&flag=30
 
-url = "http://chess-results.com/tnr499129.aspx?lan=1&zeilen=99999&art=4&flag=30&prt=4"
+ROUND_NUMBER = 3
+
+url = "https://chess-results.com/tnr600852.aspx?lan=1&zeilen=0&art=1&rd=%s&flag=30&prt=4&excel=2010" % ROUND_NUMBER
 
 df = pd.read_excel(url, skiprows=[0, 1, 2, 3])
 
